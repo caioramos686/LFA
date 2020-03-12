@@ -1,0 +1,28 @@
+import java.util.Scanner;
+
+public class MaquinaCoca {
+
+	public static void main(String[] args) {
+
+		int valor, vlr = 0, maq;
+		Scanner teclado = new Scanner(System.in);
+		
+		
+			while (vlr < 45) {
+				System.out.println("Insira a moeda de $0.25 e/ou $0.10: ");
+				valor = teclado.nextInt();
+				if(valor == 25 || valor == 10) {
+					vlr += valor;
+					System.out.println("Maquina: " + vlr);
+				}
+				else {
+					System.out.println("Moeda inválida!");
+				}
+			} 
+			System.out.println("Pegue sua coca-cola!");
+			maq = vlr - 45;
+			if(vlr > 45)
+			System.out.println("A maquina comeu: " + maq + " centavos");
+	}
+
+}
